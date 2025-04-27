@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Post</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CreatePost.css">
+  </head>
+  <body>
+    <!-- Navbar Start -->
+     <nav class="navbar">
+      <div class="logo-section">
+        <img src="your-logo.png" alt="Logo" class="logo-img" />
+        <span class="logo-text">Coranu</span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li class="close-icon" onclick="toggleMenu()">
+          <i class="fas fa-times"></i>
+        </li>
+        <li><a href="../Create Post/CreatePost.html">Create Post</a></li>
+        <li><a href="../Posts/Allposts.html">All Post</a></li>
+        <li><a href="../MyPost/MyPost.html">My Posts</a></li>
+      </ul>
+    <!-- <nav class="navbar">
+        <div class="logo-section">
+          <img src="your-logo.png" alt="Logo" class="logo-img" />
+          <span class="logo-text">Coranu</span>
+        </div> -->
+          <div class="right-buttons">
+        <a class="signin-btn" href="../login/login.html" id="google-login">
+          <i class="fa-solid fa-user-plus"></i>
+          <span>Sign In</span>
+        </a>
+
+        <div class="user-details" id="user-details" style="display: none">
+          <span id="user-email">example@email.com</span>
+          <button id="logout-btn" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+        </div>
+      </div>
+      <i
+        class="fas fa-bars menu-toggle"
+        id="menu-toggle"
+        onclick="toggleMenu()"
+      ></i>
+    </nav>
+    <!-- Navbar End-->
+   <form id="create-post-form">
+      <label for="post-title">Post Title:</label>
+      <input
+        type="text"
+        id="post-title"
+        placeholder="Enter Post Title"
+        required
+      />
+
+      <label for="post-content">Post Content:</label>
+      <textarea
+        id="post-content"
+        placeholder="Enter Post Content"
+        required
+      ></textarea>
+
+      <label for="post-category">Select Category:</label>
+      <select id="post-category">
+        <option value="Company">Company</option>
+        <option value="Design">Design</option>
+        <option value="Technology">Technology</option>
+        <option value="Crypto">Crypto</option>
+        <option value="Artificial Intelligence">Artificial Intelligence</option>
+        <option value="Work">Work</option>
+      </select>
+
+        <label for="guide-category">Select Guide and Tools:</label>
+        <select id="guide-category">
+          <option value="Guidelines">Guidelines</option>
+          <option value="Mentorship">Mentorship</option>
+          <option value="Tutorial">Tutorial</option>
+          <option value="Training">Training</option>
+          <option value="Career">Career</option>
+          <option value="Self Care">Self Care</option>
+        </select>
+      
+
+      <button type="submit">Create Post</button>
+    </form>
+
+    
+
+    <script>
+      function toggleMenu() {
+        const navLinks = document.getElementById("nav-links");
+        navLinks.classList.toggle("active");
+      }
+    </script>
+
+    <!-- Handles user auth state -->
+     <script type="module" src="./CreatePost.js"></script>
+     <script type="module" src="./Logoutbtn.js"></script>
+    <script src="../app.js" type="module"></script>
+    <script src="../Login/Login.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
+    <!-- Firebase App SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <!-- Firebase Authentication SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <!-- Firebase Firestore SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+  </body>
+</html>

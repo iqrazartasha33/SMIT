@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    135deg,
+    rgb(217, 164, 249) 0%,
+    rgb(180, 108, 225) 100%
+  );
+  overflow: hidden;
+}
+/* Navbar Start */
+.navbar {
+  background-color: black;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: purple;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: plum;
+  border-radius: 20px;
+}
+
+.right-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.signin-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #333;
+  padding: 8px 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.signin-btn i {
+  color: #4285f4;
+  font-size: 1.2rem;
+}
+
+.user-details {
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+
+#user-email {
+  color: white;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+.menu-toggle {
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+.close-icon {
+  display: none;
+  justify-content: flex-end;
+}
+
+.close-icon i {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+/* Search Bar Styling */
+#search-categories {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333 !important;
+  width: 250px;
+  margin: 0 20px; /* Left and right ka thoda space */
+}
+
+#search-categories::placeholder {
+  color: #1a1818;
+  opacity: 1; /* Zaroori hota hai kuch browsers ke liye */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  #search-categories {
+    width: 100%;
+    margin: 10px 0; /* Mobile pe thoda neeche space */
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .close-icon {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 95px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    gap: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+/* Navbar End */
+/* Ensure the container uses flex or grid */
+.container {
+    display: flex;
+    flex-direction: column; /* Stack the posts vertically */
+    gap: 20px; /* Space between posts */
+  }
+  
+  .post-card {
+    width: 100%; /* Take full width */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-footer {
+    padding: 10px;
+    text-align: right;
+  }
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+  }
+  

@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    135deg,
+    rgb(217, 164, 249) 0%,
+    rgb(180, 108, 225) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.form-container {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 500px;
+  transform: translateY(-10px);
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+input {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #333;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+input:focus {
+  border-color: purple;
+  outline: none;
+  box-shadow: 0 0 12px rgba(106, 17, 203, 0.6);
+  transform: translateY(-2px);
+}
+.btn {
+  width: 100%;
+  padding: 10px 20px ;
+  background-color: purple;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid plum;
+}
+.btn:hover {
+  background-color:plum;
+  border: 3px solid purple;
+  color: purple;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.text-center {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 16px;
+}
+.text-center a {
+  text-decoration: none;
+  color: #6a11cb;
+  font-weight: bold;
+}
+.text-center a:hover {
+  color: #2575fc;
+}
+
+  @media (max-width: 480px) {
+      body {
+        padding: 10px;
+        overflow: auto;
+      }
+      .form-container {
+        padding: 20px;
+        max-width: 90%;
+      }
+      h2 {
+        font-size: 24px;
+      }
+      input {
+        font-size: 14px;
+        padding: 12px;
+      }
+      .btn {
+        font-size: 16px;
+        padding: 12px;
+      }
+      .text-center {
+        font-size: 14px;
+      }
+    }

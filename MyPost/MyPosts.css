@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #ffff 0%,
+    whitesmoke 100%
+  );
+  overflow: hidden;
+}
+  /* Navbar Start */
+.navbar {
+  background-color: white;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1d4ed8; /* Blue color */
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.nav-links li a {
+  color:#333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #1d4ed8;
+  border-radius: 20px;
+}
+
+.right-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.signin-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #333;
+  padding: 8px 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.signin-btn i {
+  color: #4285f4;
+  font-size: 1.2rem;
+}
+
+.user-details {
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+
+#user-email {
+  color:#333;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+.menu-toggle {
+  font-size: 30px;
+  color:#333;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+.close-icon {
+  display: none;
+  justify-content: flex-end;
+}
+
+.close-icon i {
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+}
+/* Search Bar Styling */
+#search-categories {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+  width: 250px;
+  border: 2px solid #aaa;
+}
+
+#search-categories::placeholder {
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  #search-categories {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .close-icon {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 95px;
+    left: 0;
+    width: 100%;
+    background-color:white;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    gap: 20px;
+  }
+  .nav-links li a {
+    color: #333;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+   /* Navbar End */
+
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+  }
+
+.container {
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Post Cards */
+.post-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-card h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.post-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.post-card strong {
+  color: #444;
+}
+
+.post-card button {
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.post-card .btn-primary {
+  background-color: #007bff;
+  border: none;
+  color: white;
+}
+
+.post-card .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.post-card .btn-danger {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+}
+
+.post-card .btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Loader Text */
+#my-posts-container {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .post-card {
+    padding: 15px;
+  }
+
+  .post-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .post-card button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .post-card p {
+    font-size: 0.9rem;
+  }
+
+  .post-card button {
+    font-size: 0.8rem;
+  }
+}
