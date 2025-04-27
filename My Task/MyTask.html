@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create Post</title>
+    <title>My Task</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -12,37 +12,23 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./MyPosts.css">
+    <link rel="stylesheet" href="./MyTask.css" />
   </head>
   <body>
     <!-- Navbar Start -->
-     <nav class="navbar">
+    <nav class="navbar">
       <div class="logo-section">
-        <img src="your-logo.png" alt="Logo" class="logo-img" />
-        <span class="logo-text">Coranu</span>
+        <span class="logo-text">HackFlow</span>
       </div>
       <ul class="nav-links" id="nav-links">
         <li class="close-icon" onclick="toggleMenu()">
           <i class="fas fa-times"></i>
         </li>
-        <li><a href="../Create Post/CreatePost.html">Create Post</a></li>
-        <li><a href="../Posts/Allposts.html">All Post</a></li>
-        <li><a href="../MyPost/MyPost.html">My Posts</a></li>
+        <li><a href="../Create Task/CreateTask.html">Create Task</a></li>
+        <li><a href="../My Task/MyTask.html">My Task</a></li>
       </ul>
-    <!-- <nav class="navbar">
-        <div class="logo-section">
-          <img src="your-logo.png" alt="Logo" class="logo-img" />
-          <span class="logo-text">Coranu</span>
-        </div> -->
-      
 
-      <input
-      type="search"
-      name="search-categories"
-      id="search-categories"
-      placeholder="Search here..."
-    />
-          <div class="right-buttons">
+      <div class="right-buttons">
         <a class="signin-btn" href="../login/login.html" id="google-login">
           <i class="fa-solid fa-user-plus"></i>
           <span>Sign In</span>
@@ -62,26 +48,36 @@
       ></i>
     </nav>
     <!-- Navbar End -->
-    <div class="container">
-      <h2>My Blog Posts</h2>
-      <div id="my-posts-container"></div>
-    </div>
 
-    
+    <!-- Task Container Start -->
+    <div id="task-container" class="task-container">
+      <div id="todo" class="task-status">
+        <h3>To Do</h3>
+        <div class="task-list" id="todo-list"></div>
+      </div>
+
+      <div id="in-progress" class="task-status">
+        <h3>In Progress</h3>
+        <div class="task-list" id="in-progress-list"></div>
+      </div>
+
+      <div id="done" class="task-status">
+        <h3>Done</h3>
+        <div class="task-list" id="done-list"></div>
+      </div>
+    </div>
+    <!-- Task Container End -->
+
     <script>
       function toggleMenu() {
         const navLinks = document.getElementById("nav-links");
         navLinks.classList.toggle("active");
       }
     </script>
-
-    <!-- Firebase SDKs -->
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
-
-    <!-- MyPosts.js -->
-    <script type="module" src="./MyPosts.js"></script>
-    <script type="module" src="../Create Post/Logoutbtn.js"></script>
+    <script type="module" src="../app.js"></script>
+    <script type="module" src="../Login/Login.js"></script>
+    <script type="module" src="../Create Task/Logoutbtn.js"></script>
+    <script type="module" src="../Create Task/CreateTask.js"></script>
+    <script type="module" src="./MyTask.js"></script>
   </body>
 </html>

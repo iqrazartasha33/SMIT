@@ -7,12 +7,14 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(
     135deg,
-    rgb(217, 164, 249) 0%,
-    rgb(180, 108, 225) 100%
+    rgb(41, 174, 197) 0%,  
+    whitesmoke 50%,
+    rgb(237, 13, 219) 100%  
   );
   overflow: hidden;
 }
 /* Navbar Start */
+
 .navbar {
   background-color: black;
   padding: 15px 20px;
@@ -23,11 +25,26 @@ body {
   top: 0;
   z-index: 1000;
 }
-
-.logo {
-  color: purple;
-  font-size: 28px;
+.logo-section {
+  font-size: 2rem;
   font-weight: bold;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  background: linear-gradient(
+    135deg,
+    rgb(41, 174, 197) 0%,  
+    whitesmoke 50%,
+    rgb(237, 13, 219) 100%  
+  );
+    -webkit-background-clip: text;
+  color: transparent;
+  padding: 5px;
+  letter-spacing: 2px;
+  background-color: #b46fd0;
 }
 
 .nav-links {
@@ -119,31 +136,6 @@ body {
   color: white;
   cursor: pointer;
 }
-/* Search Bar Styling */
-#search-categories {
-  padding: 8px 15px;
-  border-radius: 20px;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  background-color: #fff;
-  color: #333 !important;
-  width: 250px;
-  margin: 0 20px; /* Left and right ka thoda space */
-}
-
-#search-categories::placeholder {
-  color: #1a1818;
-  opacity: 1; /* Zaroori hota hai kuch browsers ke liye */
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  #search-categories {
-    width: 100%;
-    margin: 10px 0; /* Mobile pe thoda neeche space */
-  }
-}
 
 @media (max-width: 768px) {
   .menu-toggle {
@@ -172,37 +164,89 @@ body {
   }
 }
 /* Navbar End */
-/* Ensure the container uses flex or grid */
-.container {
-    display: flex;
-    flex-direction: column; /* Stack the posts vertically */
-    gap: 20px; /* Space between posts */
-  }
-  
-  .post-card {
-    width: 100%; /* Take full width */
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
-  
-  .card-body {
-    padding: 20px;
-  }
-  
-  .card-footer {
-    padding: 10px;
-    text-align: right;
-  }
-  html,
-  body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-y: auto;
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-  }
-  
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+}
+
+/* Form container  Start */
+#taskForm {
+  max-width: 500px;
+  margin: 5px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+}
+
+#taskForm h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#taskForm div {
+  margin-bottom: 15px;
+}
+
+#taskForm label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #555;
+}
+
+#taskForm input[type="text"],
+#taskForm textarea,
+#taskForm select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#saveTaskBtn {
+  width: 100%;
+  padding: 12px;
+  background-color:  rgb(237, 13, 219);
+  color: white;
+  border: none;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#saveTaskBtn:hover {
+  background-color:plum;
+  border: 3px solid   rgb(237, 13, 219);
+  color:   rgb(237, 13, 219);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);}
+
+#deleteSection {
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#deleteTaskBtn {
+  padding: 12px 20px;
+  border: none;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#deleteTaskBtn:hover {
+  background-color: darkred;
+}

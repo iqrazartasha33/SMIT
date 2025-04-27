@@ -22,41 +22,36 @@ const firebaseConfig = {
   measurementId: "G-4YSCTC1PE4",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// DOM elements
 const userEmailDisplay = document.getElementById("user-email");
 const logoutBtn = document.getElementById("logout-btn");
 const userDetails = document.getElementById("user-details");
 const signInBtn = document.getElementById("google-login");
 
-// ----------------- AUTH ------------------
-// Show user email in navbar if logged in
+
 onAuthStateChanged(auth, (user) => {
-  console.log("Auth state changed"); // Check if this triggers
+  console.log("Auth state changed"); 
   if (user) {
-    console.log("User logged in:", user.email); // Log user email for debugging
+    console.log("User logged in:", user.email); 
     userEmailDisplay.textContent = user.email;
-    userDetails.style.display = "block"; // Show the email and logout button
+    userDetails.style.display = "block"; 
     if (signInBtn) {
-      signInBtn.style.display = "none"; // Hide the sign-in button
+      signInBtn.style.display = "none"; 
       console.log("Sign In button hidden");
     }
   } else {
     console.log("User is not logged in");
-    // User is not logged in — redirect to login page
     window.location.href = "../Login/Login.html";
     if (signInBtn) {
-      signInBtn.style.display = "inline-block"; // Show the sign-in button
+      signInBtn.style.display = "inline-block"; 
       console.log("Sign In button visible");
     }
   }
 });
 
-// Logout function
 logoutBtn.addEventListener("click", () => {
   signOut(auth)
     .then(() => {
@@ -71,7 +66,6 @@ logoutBtn.addEventListener("click", () => {
     });
 });
 
-// Logout function
 logoutBtn.addEventListener("click", () => {
   signOut(auth)
     .then(() => {

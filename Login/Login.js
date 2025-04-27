@@ -35,7 +35,7 @@ submit.addEventListener("click", function (event) {
         const user = userCredential.user;
         alert("Login Successful!");
         console.log("User Info:", user);
-        window.location = "../Create Post/CreatePost.html";
+        window.location = "../Create Task/CreateTask.html";
       })
       .catch((error) => {
         console.error("Error Code:", error.code);
