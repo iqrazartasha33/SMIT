@@ -69,7 +69,7 @@ submit.addEventListener("click", function (event) {
     Swal.fire({
       title: "Please fill in both fields.",
       icon: "warning",
-      confirmButtonText: "OK",
+      confirmButtonText: "OK!",
     });
   }
 });
