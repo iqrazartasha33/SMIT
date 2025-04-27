@@ -77,7 +77,7 @@ if (taskForm) {
         pakistanTime: new Date().toLocaleString("en-US", { timeZone: "Asia/Karachi" }),
       });
 
-      alert("✅ Task saved successfully!");
+      alert("Task saved successfully!");
       taskForm.reset();
        window.location.href = "../My Task/MyTask.html";
     } catch (error) {

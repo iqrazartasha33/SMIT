@@ -4,12 +4,12 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(
     135deg,
-    rgb(41, 174, 197) 0%,  
+    rgb(41, 174, 197) 0%,
     whitesmoke 50%,
-    rgb(237, 13, 219) 100%  
+    rgb(237, 13, 219) 100%
   );
   display: flex;
   justify-content: center;
@@ -28,16 +28,30 @@ body {
   animation: fadeIn 1s ease-in-out;
 }
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(-30px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
   font-size: 28px;
   letter-spacing: 1px;
+  background: linear-gradient(
+    135deg,
+    rgb(237, 13, 219) 0%,
+    rgb(72, 219, 245) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
+
 .form-group {
   margin-bottom: 20px;
 }
@@ -57,34 +71,35 @@ input {
   color: #333;
   background: #f9f9f9;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 12px rgb(41, 174, 197);
 }
 input:focus {
-  border-color:   rgb(237, 13, 219);
+  border-color: rgb(237, 13, 219);
   outline: none;
-  box-shadow: 0 0 12px rgba(106, 17, 203, 0.6);
+  box-shadow: 0 0 12px rgb(41, 174, 197);
   transform: translateY(-2px);
 }
 .btn {
   width: 100%;
-  padding: 10px 20px ;
-  background-color:   rgb(237, 13, 219);
+  padding: 10px 20px;
+  background-color: rgb(237, 13, 219);
   color: white;
   font-size: 18px;
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
   border: 2px solid plum;
 }
 .btn:hover {
-  background-color:plum;
-  border: 3px solid   rgb(237, 13, 219);
-  color:   rgb(237, 13, 219);
+  background-color: rgb(41, 174, 197);
+  border: 3px solid rgb(41, 174, 197);
+  color: white;
   transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 12px rgb(41, 174, 197);
 }
+
 .text-center {
   text-align: center;
   margin-top: 25px;
@@ -92,34 +107,78 @@ input:focus {
 }
 .text-center a {
   text-decoration: none;
-  color: #6a11cb;
-  font-weight: bold;
+  color: rgb(41, 174, 197);
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 .text-center a:hover {
-  color:   rgb(237, 13, 219);
+  color: rgb(237, 13, 219);
 }
+@media (max-width: 400px) {
+  .form-container {
+    width: 90%;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+  }
 
-  @media (max-width: 480px) {
-      body {
-        padding: 10px;
-        overflow: auto;
-      }
-      .form-container {
-        padding: 20px;
-        max-width: 90%;
-      }
-      h2 {
-        font-size: 24px;
-      }
-      input {
-        font-size: 14px;
-        padding: 12px;
-      }
-      .btn {
-        font-size: 16px;
-        padding: 12px;
-      }
-      .text-center {
-        font-size: 14px;
-      }
-    }
+  h2 {
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 18px;
+  }
+
+  .text-center {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+}
+@media (min-width: 401px) and (max-width: 500px) {
+  .form-container {
+    width: 85%;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 16px;
+  }
+
+  .text-center {
+    font-size: 14px;
+    margin-top: 22px;
+  }
+}

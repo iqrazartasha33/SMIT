@@ -7,9 +7,9 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(
     135deg,
-    rgb(41, 174, 197) 0%,  
+    rgb(41, 174, 197) 0%,
     whitesmoke 50%,
-    rgb(237, 13, 219) 100%  
+    rgb(237, 13, 219) 100%
   );
   overflow: hidden;
 }
@@ -29,7 +29,7 @@ body {
 .logo-section {
   font-size: 2rem;
   font-weight: bold;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   display: flex;
   align-items: center;
 }
@@ -37,17 +37,16 @@ body {
 .logo-text {
   background: linear-gradient(
     135deg,
-    rgb(41, 174, 197) 0%,  
+    rgb(41, 174, 197) 0%,
     whitesmoke 50%,
-    rgb(237, 13, 219) 100%  
+    rgb(237, 13, 219) 100%
   );
   -webkit-background-clip: text;
   color: transparent;
   padding: 5px;
   letter-spacing: 2px;
-  background-color: #B46FD0; 
+  background-color: #b46fd0;
 }
-
 
 .nav-links {
   display: flex;
@@ -165,21 +164,21 @@ body {
     display: flex;
   }
 }
-   /* Navbar End */
+/* Navbar End */
 
-  html,
-  body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-y: auto;
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-  }
-    /* Task Container Start */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+}
+/* Task Container Start */
 .task-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   width: 100%;
   max-width: 1200px;
@@ -187,7 +186,7 @@ body {
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .task-status {
@@ -199,10 +198,20 @@ body {
 }
 
 .task-status h3 {
-  font-size: 1.5rem;
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  font-size: 28px;
+  letter-spacing: 1px;
+  background: linear-gradient(
+    135deg,
+    rgb(237, 13, 219) 0%,
+    rgb(72, 219, 245) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 .task-list {
@@ -229,24 +238,28 @@ body {
   margin-bottom: 10px;
   color: #555;
 }
-
 .task-item button {
-  background-color:  rgb(237, 13, 219);
+  background-color: rgb(237, 13, 219);
   color: white;
   border: none;
-  padding: 8px 16px;
+  padding: 12px 20px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 1rem;
+  margin-right: 10px;
+  line-height: 1.5;
+  margin-bottom: 5px;
 }
 
 .task-item button:hover {
-  background-color:plum;
-  border: 3px solid   rgb(237, 13, 219);
-  color:   rgb(237, 13, 219);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);}
+  background-color: rgb(41, 174, 197);
+  border: 3px solid rgb(41, 174, 197);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px rgb(41, 174, 197);
+}
 
-    /* Task Container End */
+/* Task Container End */
 
 @media (max-width: 768px) {
   .task-container {

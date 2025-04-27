@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -188,7 +189,19 @@ body {
 #taskForm h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  font-size: 28px;
+  letter-spacing: 1px;
+  background: linear-gradient(
+    135deg,
+    rgb(237, 13, 219) 0%,
+    rgb(72, 219, 245) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+
 }
 
 #taskForm div {
@@ -211,6 +224,15 @@ body {
   border-radius: 6px;
   font-size: 16px;
   box-sizing: border-box;
+  box-shadow: 0 0 12px rgb(41, 174, 197)
+
+}
+#taskForm input[type="text"]:focus,
+#taskForm textarea:focus,
+#taskForm select:focus {
+  border-color: rgb(237, 13, 219); 
+  box-shadow: 0 0 5px rgb(237, 13, 219); 
+  outline: none; 
 }
 
 #saveTaskBtn {
@@ -219,18 +241,20 @@ body {
   background-color:  rgb(237, 13, 219);
   color: white;
   border: none;
-  font-size: 18px;
-  border-radius: 8px;
+  font-size: 20px;
+  border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+  transition: background-color 0.3s ease, transform 0.3s ease,
+  box-shadow 0.3s ease;
+ border: 2px solid plum;}
 
 #saveTaskBtn:hover {
-  background-color:plum;
-  border: 3px solid   rgb(237, 13, 219);
-  color:   rgb(237, 13, 219);
+  background-color: rgb(41, 174, 197);
+  border: 3px solid rgb(41, 174, 197);
+  color: white;
   transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);}
+  box-shadow: 0 0 12px rgb(41, 174, 197)
+}
 
 #deleteSection {
   max-width: 500px;
